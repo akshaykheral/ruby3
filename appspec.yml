@@ -1,18 +1,26 @@
-version: 0.0
+version: 0 . 0
 os: linux
 files:
-  - source: /
-    destination: /var/www/ruby3
+  - Source: /
+    destination: / var / www / ruby3
+permissions:
+   - Object: / var / www /
+     pattern: "**"
+     mode: 775
 hooks:
-  BeforeInstall:
-    - location: script/install_dependencies.sh
-      timeout: 300
-      runas: deploy
-  ApplicationStart:
-    - location: script/start_server.sh
-      timeout: 60
-      runas: deploy
   ApplicationStop:
-    - location: script/stop_server.sh
-      timeout: 60
-      runas: deploy
+    - Location: scripts / stop_server.sh
+      timeout: 300
+      runas: root
+  BeforeInstall:
+    - Location: scripts / clean.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - Location: scripts / bundle_install.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - Location: scripts / start_server.sh
+      timeout: 300
+      runas: root
