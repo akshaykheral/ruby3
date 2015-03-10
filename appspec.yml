@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - Source: /
+  - Source: /ruby3/
     destination: /home/ubuntu/tmp/
 permissions:
    - Object: /home/ubuntu/
