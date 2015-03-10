@@ -2,7 +2,7 @@ version :  0.0
 os :  linux 
 Files : 
   - source :  /
-    destination :  /var/www/html/ 
+    destination :  /var/
 Hooks : 
   BeforeInstall : 
     - location :  scripts/Install_dependencies 
