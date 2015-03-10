@@ -1,17 +1,14 @@
-version :  0.0 
-os :  linux 
-Files : 
-  - source :  /
-    destination :  /var/
-Hooks : 
-  BeforeInstall : 
-    - location :  scripts/Install_dependencies 
-      timeout :  300 
-      runas :  root 
-    - location :  scripts/start_server 
-      timeout :  300 
-      runas :  root 
-  ApplicationStop : 
-    - location :  scripts/STOP_SERVER 
-      timeout :  300 
-      runas :  root
+version: 0.0
+os: linux
+files:
+   - source: /
+     destination: /var/www/html
+hooks:
+   BeforeInstall:
+    - location: scripts/installbundle.sh
+      runas: root
+    - location: scripts/startrails.sh
+      runas: root
+   AfterInstall:
+    - location: scripts/restartrails.sh
+      runas: root
