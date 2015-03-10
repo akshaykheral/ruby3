@@ -1,10 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - Source: /ruby3/
+  - source: /ruby3/
     destination: /home/ubuntu/tmp/
 permissions:
-   - Object: /home/ubuntu/
+   - object: /home/ubuntu/
      pattern: "**"
      mode: 775
 hooks:
