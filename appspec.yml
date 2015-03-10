@@ -1,26 +1,26 @@
-version: 0 . 0
+version: 0.0
 os: linux
 files:
   - Source: /
-    destination: / var / www / ruby3
+    destination: /var/www/ruby3
 permissions:
-   - Object: / var / www /
+   - Object: /var/www/
      pattern: "**"
      mode: 775
 hooks:
   ApplicationStop:
-    - Location: scripts / stop_server.sh
+    - Location: scripts/stop_server.sh
       timeout: 300
       runas: root
   BeforeInstall:
-    - Location: scripts / clean.sh
+    - Location: scripts/clean.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - Location: scripts / bundle_install.sh
+    - Location: scripts/bundle_install.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - Location: scripts / start_server.sh
+    - Location: scripts/start_server.sh
       timeout: 300
       runas: root
