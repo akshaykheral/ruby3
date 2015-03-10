@@ -2,9 +2,9 @@ version: 0 . 0
 os: linux
 files:
   - Source: /
-    destination: /var/www/
+    destination: /home/ubuntu/tmp/
 permissions:
-   - Object: /var/
+   - Object: /home/ubuntu/
      pattern: "**"
      mode: 775
 hooks:
