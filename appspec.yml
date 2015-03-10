@@ -1,7 +1,7 @@
 version :  0.0 
 os :  linux 
 Files : 
-  - source :  ruby3/app/views/welcome/index.erb
+  - source :  /
     destination :  /var/www/html/ 
 Hooks : 
   BeforeInstall : 
