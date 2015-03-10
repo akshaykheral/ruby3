@@ -1,14 +1,26 @@
-version: 0.0
+version: 0 . 0
 os: linux
 files:
-   - source: /
-     destination: /var/www/html
+  - Source: /
+    destination: /var/www/
+permissions:
+   - Object: /var/
+     pattern: "**"
+     mode: 775
 hooks:
-   BeforeInstall:
-    - location: scripts/installbundle.sh
+  ApplicationStop:
+    - Location: scripts/stop_server.sh
+      timeout: 300
       runas: root
-    - location: scripts/startrails.sh
+  BeforeInstall:
+    - Location: scripts/clean.sh
+      timeout: 300
       runas: root
-   AfterInstall:
-    - location: scripts/restartrails.sh
+  AfterInstall:
+    - Location: scripts/bundle_install.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - Location: scripts/start_server.sh
+      timeout: 300
       runas: root
