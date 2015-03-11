@@ -1,4 +1,2 @@
 #!/bin/bash
-export PATH=$PATH:/usr/local/rvm/gems/ruby 2.2.1p85/bin
-cd /home/ubuntu/tmp
-rails server
+su  -l Deploy -c 'cd /var/www/ruby3 && bundle EXEC unicorn -D -E production -c config/Unicorn.Rb'
