@@ -1,2 +1,2 @@
 #!/Bin/bash
-sudo  rm  -rf home/ubuntu/tmp
+sudo rm  -rf /var/www/ruby3
