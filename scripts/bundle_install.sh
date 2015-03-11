@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-bundle install
+gem install bundler && bundle install
