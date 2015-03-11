@@ -1,2 +1,2 @@
-#!/bin/bash
-kill -INT $(cat tmp/pids/server.pid)
+#!/Bin/bash
+su  -l Deploy -c 'kill -KILL -s QUIT `cat /var/www/ruby3/tmp/pids/Unicorn.Pid`'
