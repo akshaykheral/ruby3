@@ -1,2 +1,2 @@
-#!/usr/local/sbin/bash
-bundle install
+#!/usr/bin/bash
+cd /var/www/ruby3/ && bundle install
