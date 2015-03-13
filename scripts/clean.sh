@@ -1,2 +1,2 @@
-#!/usr/Bin/bash
+#!/Bin/bash
 sudo rm  -rf /var/www/ruby3
