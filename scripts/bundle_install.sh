@@ -1,2 +1,2 @@
-#!/usr/local/bin/bash
+#!/usr/local/sbin/bash
 bundle install
