@@ -7,8 +7,6 @@ permissions:
    - object: /var/www/
      pattern: "**"
      mode: 775
-     acls: 
-      - u:ubuntu:rw
 hooks:
    AfterInstall:
     - location: scripts/bundle_install.sh
