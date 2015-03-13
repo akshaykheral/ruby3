@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-gem install bundler && bundle install
+sudo -s && bundle install
