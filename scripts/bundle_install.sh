@@ -1,2 +1,2 @@
-#!/usr/bin/bash
-sudo -s && bundle install
+#!/usr/local/bin/bash
+bundle install
